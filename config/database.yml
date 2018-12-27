@@ -49,6 +49,9 @@ test:
 #
 production:
   <<: *default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
   database: freetimes_production
   username: freetimes
   password: <%= ENV['FREETIMES_DATABASE_PASSWORD'] %>
